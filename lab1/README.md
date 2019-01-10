@@ -165,17 +165,20 @@ go. The main source of information should preferably be golang.org, which
 offers extensive documentation. Another great way to learn Go is to complete
 the tour linked in the task below.
 
-There exist Go support for many editors, among others, vim and Eclipse. See
-http://go-lang.catv.org/text-editors for others. Note that early versions of
-the Golang Eclipse plugin was pretty flaky, but this might have improved over
-the years, so feel free to try it out. Another editor that we have had some
-experience with is LiteIDE, which is okay, but is a bit tricky to set up the
-environment to facilitate running your programs from within the IDE. Another
-great editor with Go support is Sublime Text.
+##### Programming tools
+
+`1`. [Visual Studio Code](https://code.visualstudio.com/) 
+
+Visual Studio Code is a great cross-platform editor with support for the Go language through an extension. We recommend using this editor since it is easy to setup and has good support for debugging.
+
+`2.` [GoLand](https://www.jetbrains.com/go/)
+
+GoLand is another good cross platform IDE for programming Go.
+
+
+`3.` [Sublime](https://www.sublimetext.com/3)
 
 Here are some directions to get Sublime Text to work with Go. You will need to install three things.
-
-`1.` [Sublime](https://www.sublimetext.com/3)
 
 Download and extract the 64-bit Linux tarball.
 
@@ -212,11 +215,11 @@ Example:
 Now you should be able to open sublime just by typing
 `sublime_text`
 
-`2.` [Package Control](https://packagecontrol.io/)
+`4.` [Package Control](https://packagecontrol.io/)
 
 Just follow the instructions [here](https://packagecontrol.io/installation).
 
-`3.` [GoSublime](https://github.com/DisposaBoy/GoSublime)
+`5.` [GoSublime](https://github.com/DisposaBoy/GoSublime)
 
 Just follow the instructions [here](https://github.com/DisposaBoy/GoSublime#installation).
 
