@@ -2,13 +2,13 @@
 
 # Lab 1: Getting Started
 
-| Lab 1:		| Getting Started			|
-| -------------------- 	| ------------------------------------- |
-| Subject: 		| DAT520 Distributed Systems 		|
-| Deadline:		| Wednesday Jan 21 2015 12:00		|
-| Expected effort:	| 10-15 hours 				|
-| Grading: 		| Pass/fail 				|
-| Submission: 		| Individually				|
+| Lab 1:           | Getting Started             |
+| ---------------- | --------------------------- |
+| Subject:         | DAT520 Distributed Systems  |
+| Deadline:        | Thursday Jan 24 2019 14:00  |
+| Expected effort: | 10-15 hours                 |
+| Grading:         | Pass/fail                   |
+| Submission:      | Individually                |
 
 ### Table of Contents
 
@@ -123,7 +123,7 @@ http://user.ux.uis.no.
 **Task - getting to know a Unix-like system:**
 
 If you have not worked on a Unix or GNU/Linux system before, make yourself
-acquainted with the basic functionality of a Unix shell.  There are many
+acquainted with the basic functionality of a Unix shell. There are many
 different tutorials available online. One introduction is
 http://www.ee.surrey.ac.uk/Teaching/Unix/. You will need many of the commands
 mentioned there to use the remote login shell described above (ssh).
@@ -133,21 +133,20 @@ mentioned there to use the remote login shell described above (ssh).
 Basic knowledge of Git and GitHub is needed when working on the lab
 assignments:
 
-* Git is a distributed revision control and source code management system.
+- Git is a distributed revision control and source code management system.
   Basic knowledge of Git is required for handing in the lab assignments. There
   are many resources available online for learning Git. A good book is _Pro
   Git_ by Scott Chacon. The book is available for free at
-  http://git-scm.com/book.  Chapter 2.1 and 2.2 should contain the necessary
+  http://git-scm.com/book. Chapter 2.1 and 2.2 should contain the necessary
   information for delivering the lab assignments.
 
-* GitHub is a web-based hosting service for software development projects that
-  use the Git revision control system.  An introduction to Git and GitHub is
+- GitHub is a web-based hosting service for software development projects that
+  use the Git revision control system. An introduction to Git and GitHub is
   available in this video: http://youtu.be/U8GBXvdmHT4. Students need to sign
   up for a GitHub account to get access to the required course material.
 
 This course is registered as a GitHub organization. The organization can be
 found at http://github.com/uis-dat520-s2019.
-
 
 #### The Go Programming Language
 
@@ -179,29 +178,39 @@ Here are some directions to get Sublime Text to work with Go. You will need to i
 `1.` [Sublime](https://www.sublimetext.com/3)
 
 Download and extract the 64-bit Linux tarball.
+
 ```
 	cd $HOME/Downloads
 	tar -C <destination directory> -xvf <tarball file name>
 ```
+
 Example:
+
 ```
 	tar -C $HOME -xvf sublime_text_3_build_3103_x64.tar.bz2
 ```
+
 Adding the location of the `sublime_text` executable to your path in the `.bashrc` file in your `$HOME` directory can make opening sublime easier.
+
 ```
 	cd $HOME
 	vi .bashrc
 ```
+
 Add the following line:
+
 ```
 	export PATH=$PATH:<directory of sublime_text>
 ```
+
 Example:
+
 ```
 	export PATH=$PATH:$HOME/sublime_text_3
 ```
+
 Now you should be able to open sublime just by typing
-	`sublime_text`
+`sublime_text`
 
 `2.` [Package Control](https://packagecontrol.io/)
 
@@ -242,11 +251,11 @@ Go programming.
 
 Set up a workspace, try to install and run simple packages, as explained on
 [here](http://golang.org/doc/code.html). Don't forget to export your workspace
-as ```$GOPATH```.  Assuming that you have configured ```$GOPATH``` correctly,
+as `$GOPATH`. Assuming that you have configured `$GOPATH` correctly,
 you can run the go tool and its subcommands from any directory.
 
-***It is very important that your Go installation and workspace setup is
-verified working correctly before you proceed.***
+**_It is very important that your Go installation and workspace setup is
+verified working correctly before you proceed._**
 
 ## Go Assignments
 
@@ -265,7 +274,7 @@ they serve as a good example of how to work with Autograder.
    repository. Your answers to the assignments should be pushed here.
 
 2. To get started with the Go part of this lab, you can now use the `go get`
-   command to clone the original `assignments` repository.  Here is how to do it: On
+   command to clone the original `assignments` repository. Here is how to do it: On
    the command line enter: `go get github.com/uis-dat520-s2019/assignments` (ignore the
    message about no buildable Go files). This will clone the original `assignments`
    git repo (not your copy of it.) This is important because it means that you
@@ -274,8 +283,7 @@ they serve as a good example of how to work with Autograder.
    handin, you don't have to change this back to the original import path.
 
 3. Change directory to: `cd $GOPATH/src/github.com/uis-dat520-s2019/assignments`. Next, run
-   the following command: `git remote add labs
-   https://github.com/uis-dat520-s2019/username-labs` where `username` should be
+   the following command: `git remote add labs https://github.com/uis-dat520-s2019/username-labs` where `username` should be
    replaced with your own GitHub username.
 
 4. The above command adds your own `username-labs` repository as a remote
@@ -300,14 +308,13 @@ they serve as a good example of how to work with Autograder.
 
 8. For the first set of labs we will provide you with skeleton code and a set of
    tests. Thus, you will have to implement the missing pieces of the skeleton code,
-   and verify that your implementation passes the available tests. 
+   and verify that your implementation passes the available tests.
    Note that Autograder will run an additional set of test cases to verify your
    implementation. Not all tests must pass to get a passing grade.
 
 9. In the following, we will use **Task 1** as an example. Change directory to:
    `cd $GOPATH/src/github.com/uis-dat520-s2019/assignments/lab1` and confirm that the files
-   for lab1 resides in that folder. They should, assuming that you ran the `go
-   get` command earlier. The file `fib.go` contain the following skeleton code:
+   for lab1 resides in that folder. They should, assuming that you ran the `go get` command earlier. The file `fib.go` contain the following skeleton code:
 
    ```go
    package lab1
@@ -317,54 +324,53 @@ they serve as a good example of how to work with Autograder.
    // fibonacci(n) returns nth Fibonacci number, and is defined by the
    // recurrence relation F_n = F_n-1 + F_n-2, with seed values F_0=0 and F_1=1.
    func fibonacci(n uint) uint {
-	   return 0
+   0
    }
    ```
 
 10. Implement the function body according to the specification so that all the
     tests in the corresponding `fib_test.go` file passes. The file looks like
     this:
+
     ```go
     package lab1
 
     import "testing"
 
     var fibonacciTests = []struct {
-	    in, want uint
+        in, want uint
     }{
-	    {0, 0},
-	    {1, 1},
-	    {2, 1},
-	    {3, 2},
-	    {4, 3},
-	    {5, 5},
-	    {6, 8},
-	    {7, 13},
-	    {8, 21},
-	    {9, 34},
-	    {10, 55},
-	    {20, 6765},
+        {0, 0},
+        {1, 1},
+        {2, 1},
+        {3, 2},
+        {4, 3},
+        {5, 5},
+        {6, 8},
+        {7, 13},
+        {8, 21},
+        {9, 34},
+        {10, 55},
+        {20, 6765},
     }
 
     func TestFibonacci(t *testing.T) {
-	    for i, ft := range fibonacciTests {
-		    out := fibonacci(ft.in)
-		    if out != ft.want {
-			    t.Errorf("fib test %d: got %d for input %d, want %d", i, out, ft.in, ft.want)
-		    }
-	    }
+        for i, ft := range fibonacciTests {
+    	    out := fibonacci(ft.in)
+    	    if out != ft.want {
+    		    t.Errorf("fib test %d: got %d for input %d, want %d", i, out, ft.in, ft.want)
+    	    }
+        }
     }
     ```
 
 11. If you run `go test` without any arguments, the tool will run all the tests
-    found in files with name matching the pattern "*_test.go". You may only run
-    a specific test by providing the `-run` flag to `go test`. For example, `go
-    test -run TestFib` will only run the `TestFibonacci` test. Generally,
+    found in files with name matching the pattern "\*\_test.go". You may only run
+    a specific test by providing the `-run` flag to `go test`. For example, `go test -run TestFib` will only run the `TestFibonacci` test. Generally,
     running `go test -run regexp` will run only those tests matching the
     regular expression `regexp`.
 
-12. You should ***not*** edit files or code that are marked with a `// DO NOT
-    EDIT` comment. Please make separate `filename_test.go` files if you wish
+12. You should **_not_** edit files or code that are marked with a `// DO NOT EDIT` comment. Please make separate `filename_test.go` files if you wish
     to write and run your own tests.
 
 13. When you have completed a task and sufficiently many local tests pass, you
@@ -373,6 +379,7 @@ they serve as a good example of how to work with Autograder.
 
 14. Using the Fibonacci task (`fib.go`) as an example, use the following
     procedure to commit and push your changes to GitHub and Autograder:
+
     ```
     $ cd $GOPATH/src/github.com/uis-dat520-s2019/assignments/lab1
     $ git add fib.go
@@ -416,7 +423,7 @@ they serve as a good example of how to work with Autograder.
     interface](http://autograder.ux.uis.no/). The results (build log) should be
     available under "Individual - lab1". Note that the results shows output
     for all the tests in current lab assignment. You will want to focus on the
-	output for the specific test results related to the task you're working on.
+    output for the specific test results related to the task you're working on.
 
 17. **Task 2:** Complete the task found in `stringer.go`. You may check your
     solution locally with the tests found in `stringer_test.go`.
