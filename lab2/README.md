@@ -15,7 +15,8 @@
 1. [Introduction](https://github.com/uis-dat520-s2019/assignments/blob/master/lab2/README.md#introduction)
 2. [UDP Echo Server](https://github.com/uis-dat520-s2019/assignments/blob/master/lab2/README.md#udp-echo-server)
 3. [Web Server](https://github.com/uis-dat520-s2019/assignments/blob/master/lab2/README.md#web-server)
-4. [Lab Approval](https://github.com/uis-dat520-s2019/assignments/blob/master/lab2/README.md#lab-approval)
+4. [gRPC](https://github.com/uis-dat520-s2019/assignments/blob/master/lab2/README.md#remote-procedure-call)
+5. [Lab Approval](https://github.com/uis-dat520-s2019/assignments/blob/master/lab2/README.md#lab-approval)
 
 ## Introduction
 
@@ -222,6 +223,10 @@ Hello World!%
    `200` and the body `no value provided\n`.
 
 1. All other patterns should return status code `404` and the body `404 page not found\n`.
+
+## Remote procedure call
+
+The description for gRPC can be found here: [gRPC](https://github.com/uis-dat520-s2019/assignments/tree/master/lab2/grpc)
 
 ## Lab Approval
 
