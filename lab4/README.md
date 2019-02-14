@@ -15,9 +15,10 @@
 1. [Introduction](#introduction)
 2. [Resources](#resources)
 3. [Questions](#questions-10)
-4. [Algorithm Implementation](#algorithm-implementation-40)
+4. [Algorithm Implementation](#algorithm-implementation-30)
 5. [Distributed Implementation](#distributed-implementation-50)
-6. [Lab Approval](#lab-approval)
+6. [Dockerize your application](#dockerize-your-application-10)
+7. [Lab Approval](#lab-approval)
 
 ## Introduction
 
@@ -413,13 +414,13 @@ additional logic to handle this case if you want. The proposer does also not
 implement a progress check to verify that a prepare or accept actually results
 in a quorum of promises or a value being chosen.
 
-## Dockerize your application (10 %)
+## Dockerize your application (10%)
 In subsequent labs we will use [containers](https://www.docker.com/resources/what-container) 
 to run multiple instances of Paxos nodes. As part of this lab you are expected to complete 
 the installation of Docker and containerize your application.
 
 1. [Docker installation](https://docs.docker.com/install/)
-* [Deploying Go servers with Docker](https://blog.golang.org/docker)
+2. [Deploying Go servers with Docker](https://blog.golang.org/docker)
 
 ```Docker
 # This is a template Dockerfile
@@ -465,7 +466,7 @@ demonstrate the following scenario:
    response.
 
 3. Send another different client command to the system. The system should reply
-   with the value _form the previous command_.
+   with the value _from the previous command_.
 
 4. Stop the leader Paxos node and let the system choose a new leader. Let the
    clients connect to the new leader and send yet another command. The system
