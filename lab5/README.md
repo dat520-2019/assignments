@@ -1,4 +1,4 @@
-![UiS](../img/uis-logo-en.png)
+![UiS](https://www.uis.no/getfile.php/13391907/Biblioteket/Logo%20og%20veiledninger/UiS_liggende_logo_liten.png)
 
 # Lab 5: Multi-Paxos
 
