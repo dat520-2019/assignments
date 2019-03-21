@@ -649,8 +649,41 @@ Implementations that establish a new TCP connection for every message will get
 a reduced score. The same also applies to client connections.
 
 ## Dockerize your application (20%)
-** More information will follow **
+You should dockerize your application in the same way as in [lab 4](https://dat520.github.io/r/?assignments/tree/master/lab4#dockerize-your-application-10). Remember to replace _PaxosServer_ with the name of the directory where your application is located. If your application requires command-line arguments, they can be added at the end of the `docker run` command.
 
+```Docker
+# This is a template Dockerfile
+
+# Start from a Debian image with the latest version of Go installed
+# and a workspace (GOPATH) configured at /go.
+FROM golang
+
+# Copy the local package files to the container's workspace.
+COPY ./ /go/src/dat520.github.io
+
+# Build your application inside the container.
+RUN go install dat520.github.io/lab5/PaxosServer
+
+# Run your application when the container starts
+ENTRYPOINT ["/go/bin/PaxosServer"]
+```
+```go
+# Go to your group repository. This is neccessary to use the command below
+# to build your container.
+cd $GOPATH/src/$gpath
+
+# Build your container
+docker build -t dat520-lab5 -f lab5/PaxosServer/Dockerfile .
+
+# Create network
+docker network create --subnet=192.168.0.0/16 dat520
+
+# Run your container
+docker run -itd --name lab5_1 --net dat520 --ip 192.168.1.1 --rm dat520-lab5
+
+# Attach standard input, output and error streams
+docker attach lab5_1
+``` 
 
 #### Test Scenarios
 
