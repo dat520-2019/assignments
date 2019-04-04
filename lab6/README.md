@@ -5,7 +5,7 @@
 | Lab 6:		| Extensions and Optimizations		|
 | -------------------- 	| ------------------------------------- |
 | Subject: 		| DAT520 Distributed Systems 		|
-| Deadline:		| Thursday Apr 18 2019 12:00		|
+| Deadline:		| Tuesday Apr 23 2019 12:00		|
 | Expected effort:	| 30 hours 				|
 | Grading: 		| Lab Exam 				|
 | Submission: 		| Group					|
